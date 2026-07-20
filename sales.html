@@ -8,7 +8,7 @@
 <meta name="description" content="Browse BOYD Automotive's used cars for sale in Bedmond — message us on WhatsApp to check current stock.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
@@ -64,7 +64,18 @@
     <div class="section-head">
       <span class="kicker">Browse our stock</span>
       <h2>Find your next car</h2>
-      <p>We're still setting up our online listings, so for now the quickest way to see what's on the forecourt is to ask us directly — send a WhatsApp message and we'll reply with photos, mileage and price for anything that matches what you're after.</p>
+      <p>Here's what's currently on the forecourt. Tap any car to see the full listing, photos and more detail.</p>
+    </div>
+    <div id="car-listings" class="car-grid"></div>
+  </div>
+</section>
+
+<section class="section-tight" style="background:var(--paper-dim);">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Can't see what you're after?</span>
+      <h2>Ask us directly</h2>
+      <p>Our stock changes fast and not everything makes it online straight away — send a WhatsApp message and we'll reply with photos, mileage and price for anything that matches what you're after.</p>
     </div>
     <div class="wa-contact">
       <div class="wa-icon">
@@ -173,6 +184,9 @@
 <a href="https://wa.me/447467790798" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.28-1.38a9.9 9.9 0 0 0 4.71 1.2h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2Z"/></svg>
 </a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="car-listings.js"></script>
 
 </body>
 </html>
