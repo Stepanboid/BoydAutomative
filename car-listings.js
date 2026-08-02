@@ -5,37 +5,34 @@
    in the sheet — there's no limit on the number of cars.
 
    ---------------------------------------------------------------
-   HOW TO SET THIS UP (one-time, takes about 5 minutes)
+   HOW TO ADD A CAR (for BOYD Automotive — no coding needed)
    ---------------------------------------------------------------
-   1. Create a new Google Sheet with this header row in row 1:
-        Photo | Name | Price | Link
-      (capitalization doesn't matter — "photo", "Photo" and "PHOTO" all work)
-      Example row 2:
-        cars/ford-focus.jpg | Ford Focus 1.0 EcoBoost 2019 | £8,995 | https://www.autotrader.co.uk/car-details/xxxxx
+   Open the Google Sheet and add one row per car, with these columns:
 
-   2. In Google Sheets: File → Share → Publish to web
-        - Under "Link", choose the correct sheet tab (not "Entire document" if you have multiple tabs)
-        - Under format, choose "Comma-separated values (.csv)"
-        - Click Publish, then copy the link it gives you
+     Photo | Name | Price | Link
 
-   3. Paste that link below, replacing SHEET_CSV_URL.
+   PHOTO — paste a Google Drive share link:
+     1. Upload the car photo to Google Drive
+     2. Right-click the file → Share → change access to
+        "Anyone with the link" (viewer is fine)
+     3. Click "Copy link" and paste that link straight into the
+        Photo column — the site converts it automatically, no
+        extra steps needed.
 
-   4. For photos: the simplest way is to upload your car photos into
-      a folder called "cars" right next to these site files (in the
-      same GitHub repo), then just type the filename in the Photo
-      column, e.g.  cars/ford-focus.jpg
-      (You can also paste a full https:// image link instead, from
-      anywhere that hosts images publicly.)
+   NAME — e.g.  Ford Focus 1.0 EcoBoost 2019
 
-   That's it — every new row you add to the sheet appears on the
-   site automatically next time someone loads the page. No coding,
-   no re-uploading files needed.
+   PRICE — e.g.  £8,995
+
+   LINK — the AutoTrader (or other marketplace) listing URL
+
+   Capitalisation of the column headers doesn't matter.
+   Save the sheet — new rows appear on the site automatically
+   the next time someone loads the page. Nothing else to do.
    ---------------------------------------------------------------
 */
 
 (function () {
-  // 🔧 PASTE YOUR PUBLISHED GOOGLE SHEET CSV LINK BETWEEN THE QUOTES BELOW:
-  const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRRB5CDE-57pInW3oSGc6zI3XTBU8zcX_qFKgmvN604LzRDShhifWJ97PE7107-RLwnzw1Q8lISIc6G/pub?gid=0&single=true&output=csv";
+  const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSrjHT23yoluE2HcxdaqYh7RC9tqpxx2O7Byui95nk2OsWIS6ZnTQpubLLeyzrLKtvyhAOAxb4dZjwi/pub?gid=0&single=true&output=csv";
 
   const grid = document.getElementById("car-listings");
   if (!grid) return;
@@ -53,6 +50,31 @@
 
   function showStatus(message) {
     status.textContent = message;
+  }
+
+  // Converts a normal Google Drive "share" link into a direct image
+  // URL that can be used in an <img src>. Works with any of the
+  // common Drive link formats people end up copying:
+  //   https://drive.google.com/file/d/FILE_ID/view?usp=sharing
+  //   https://drive.google.com/open?id=FILE_ID
+  //   https://drive.google.com/uc?id=FILE_ID
+  // Non-Drive links (e.g. a normal https:// image URL, or a path
+  // like cars/focus.jpg) are returned unchanged.
+  function resolveImageUrl(rawUrl) {
+    if (!rawUrl) return "";
+    if (rawUrl.indexOf("drive.google.com") === -1) return rawUrl;
+
+    let fileId = "";
+    const fileMatch = rawUrl.match(/\/file\/d\/([^/]+)/);
+    if (fileMatch) {
+      fileId = fileMatch[1];
+    } else {
+      const idMatch = rawUrl.match(/[?&]id=([^&]+)/);
+      if (idMatch) fileId = idMatch[1];
+    }
+
+    if (!fileId) return rawUrl;
+    return "https://lh3.googleusercontent.com/d/" + fileId;
   }
 
   function normalizeRow(row) {
@@ -81,7 +103,7 @@
     newGrid.className = "car-grid";
 
     validCars.forEach(function (car) {
-      const photo = (car.photo || "").trim();
+      const photo = resolveImageUrl((car.photo || "").trim());
       const name = (car.name || "").trim();
       const price = (car.price || "").trim();
       const link = (car.link || "").trim();
@@ -123,7 +145,7 @@
   Papa.parse(SHEET_CSV_URL, {
     download: true,
     header: true,
-    skipEmptyLines: true,
+    skipEmptyLines: "greedy",
     complete: function (results) {
       renderCars(results.data || []);
     },
