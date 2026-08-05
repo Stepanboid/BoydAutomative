@@ -32,7 +32,7 @@
 */
 
 (function () {
-  const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSrjHT23yoluE2HcxdaqYh7RC9tqpxx2O7Byui95nk2OsWIS6ZnTQpubLLeyzrLKtvyhAOAxb4dZjwi/pub?output=csv";
+  const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSrjHT23yoluE2HcxdaqYh7RC9tqpxx2O7Byui95nk2OsWIS6ZnTQpubLLeyzrLKtvyhAOAxb4dZjwi/pub?gid=0&single=true&output=csv";
 
   const grid = document.getElementById("car-listings");
   if (!grid) return;
