@@ -32,7 +32,7 @@
 */
 
 (function () {
-  const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRRB5CDE-57pInW3oSGc6zI3XTBU8zcX_qFKgmvN604LzRDShhifWJ97PE7107-RLwnzw1Q8lISIc6G/pub?gid=0&single=true&output=csv";
+  const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSrjHT23yoluE2HcxdaqYh7RC9tqpxx2O7Byui95nk2OsWIS6ZnTQpubLLeyzrLKtvyhAOAxb4dZjwi/pub?gid=0&single=true&output=csv";
 
   const grid = document.getElementById("car-listings");
   if (!grid) return;
@@ -93,6 +93,8 @@
       return row.name && row.name.trim();
     });
 
+    console.log("[car-listings] Total rows from sheet:", rows.length, "| Valid cars after filtering:", validCars.length);
+
     if (!validCars.length) {
       showStatus("No cars listed right now — message us on WhatsApp to ask what's in stock.");
       return;
@@ -134,23 +136,46 @@
 
   if (!SHEET_CSV_URL) {
     showStatus("Car listings aren't connected yet — message us on WhatsApp to ask what's in stock.");
+    console.warn("[car-listings] SHEET_CSV_URL is empty — nothing to load.");
     return;
   }
 
   if (typeof Papa === "undefined") {
     showStatus("Couldn't load car listings right now — message us on WhatsApp to ask what's in stock.");
+    console.error("[car-listings] PapaParse didn't load (check the <script> tag for papaparse.min.js).");
     return;
   }
 
-  Papa.parse(SHEET_CSV_URL, {
-    download: true,
-    header: true,
-    skipEmptyLines: "greedy",
-    complete: function (results) {
+  // Cache-busting: Google's published CSV endpoint (and some browsers/CDNs)
+  // can serve a stale cached copy of the sheet for a while after an edit.
+  // Adding a changing query param forces a genuinely fresh fetch every time.
+  const cacheBustedUrl =
+    SHEET_CSV_URL + (SHEET_CSV_URL.indexOf("?") === -1 ? "?" : "&") + "_=" + Date.now();
+
+  console.log("[car-listings] Fetching:", cacheBustedUrl);
+
+  fetch(cacheBustedUrl, { cache: "no-store" })
+    .then(function (response) {
+      console.log("[car-listings] Fetch response status:", response.status);
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status + " " + response.statusText);
+      }
+      return response.text();
+    })
+    .then(function (csvText) {
+      console.log("[car-listings] Raw CSV received (first 300 chars):", csvText.slice(0, 300));
+      const results = Papa.parse(csvText, {
+        header: true,
+        skipEmptyLines: "greedy",
+      });
+      console.log("[car-listings] Parsed rows:", results.data);
+      if (results.errors && results.errors.length) {
+        console.warn("[car-listings] Parse warnings:", results.errors);
+      }
       renderCars(results.data || []);
-    },
-    error: function () {
+    })
+    .catch(function (err) {
+      console.error("[car-listings] Failed to load or parse the sheet:", err);
       showStatus("Couldn't load car listings right now — message us on WhatsApp to ask what's in stock.");
-    },
-  });
+    });
 })();
