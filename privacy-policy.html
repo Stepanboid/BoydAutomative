@@ -4,711 +4,227 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy &amp; Terms | BOYD Automotive</title>
-<meta name="description" content="Privacy Policy and Terms & Conditions for BOYD Automotive — how we collect and use your data, and the terms that apply to using our website and services.">
+<meta name="description" content="Privacy Policy and Terms & Conditions for BOYD Automotive.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://boydautomotive.co.uk/privacy-policy.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-/* ============================================================
-   EMBEDDED STYLES & DARK THEME FOR PRIVACY POLICY
-   ============================================================ */
-
-/* CSS Variables */
-:root {
-  --green-950: #0d1210;
-  --green-900: #141c18;
-  --green-800: #1d2923;
-  --amber: #f2a900;
-  --amber-dark: #d98200;
-  --rust: #a84223;
-  --paper: #fffdf8;
-  --paper-dim: rgba(255, 253, 248, 0.7);
-  --white: #ffffff;
-  --radius: 4px;
-  
-  --font-sans: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-heading: 'Oswald', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-}
-
-/* Base resets & typography */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: var(--green-950);
-  color: var(--paper);
-  font-family: var(--font-sans);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3, h4 {
-  font-family: var(--font-heading);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  font-weight: 600;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.container {
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Header & Topbar */
-.site-topfix {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--green-950);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.topbar {
-  background: var(--green-900);
-  font-size: 0.8rem;
-  font-family: var(--font-mono);
-  padding: 6px 0;
-  color: var(--paper-dim);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.topbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.topbar-left {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.topbar-left a, .topbar-left span {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.topbar-icon {
-  width: 14px;
-  height: 14px;
-  fill: var(--amber);
-}
-
-.topbar-socials {
-  display: flex;
-  gap: 12px;
-}
-
-.topbar-socials svg {
-  width: 16px;
-  height: 16px;
-  fill: var(--paper-dim);
-  transition: fill 0.2s;
-}
-
-.topbar-socials a:hover svg {
-  fill: var(--amber);
-}
-
-.site-header {
-  padding: 12px 0;
-  background: var(--green-950);
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.brand-logo {
-  height: 42px;
-  width: auto;
-  display: block;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 24px;
-}
-
-.nav-links a {
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  text-transform: uppercase;
-  color: var(--paper);
-  transition: color 0.2s;
-}
-
-.nav-links a:hover {
-  color: var(--amber);
-}
-
-.nav-cta {
-  display: flex;
-  gap: 10px;
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  text-transform: uppercase;
-  padding: 8px 16px;
-  border-radius: var(--radius);
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.btn-sm {
-  padding: 6px 12px;
-  font-size: 0.85rem;
-}
-
-.btn-outline {
-  border: 1px solid var(--amber);
-  color: var(--amber);
-}
-
-.btn-outline:hover {
-  background: var(--amber);
-  color: var(--green-950);
-}
-
-.btn-whatsapp {
-  background: #25D366;
-  color: #fff;
-}
-
-.btn-whatsapp:hover {
-  background: #1ebc57;
-}
-
-.nav-toggle, .nav-toggle-label {
-  display: none;
-}
-
-/* Page Intro Header */
-.page-intro {
-  background: var(--green-950);
-  color: var(--paper);
-  padding: 64px 0 32px;
-  text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
-
-.page-intro p:first-child {
-  font-family: var(--font-mono);
-  font-size: .78rem;
-  letter-spacing: .08em;
-  color: var(--paper-dim);
-  margin-bottom: 14px;
-}
-
-.page-intro p:first-child a {
-  color: var(--amber);
-}
-
-.page-intro h1 {
-  font-size: clamp(2rem, 4vw, 3.3rem);
-  color: var(--white);
-  margin-bottom: 12px;
-}
-
-.page-intro .kicker {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--amber);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 8px;
-}
-
-.page-intro p:last-child {
-  font-family: var(--font-mono);
-  font-size: .76rem;
-  color: rgba(255,253,248,.65);
-  margin: 16px 0 0;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-
-/* Policy Content Section */
-.policy-content {
-  padding: 48px 0 88px;
-  background: var(--green-950);
-}
-
-.policy-content .container {
-  max-width: 860px;
-}
-
-.policy-content h2 {
-  color: var(--white);
-  font-size: clamp(1.55rem, 3vw, 2.1rem);
-  margin-top: 54px;
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.policy-content h2:first-of-type {
-  margin-top: 20px;
-}
-
-.plate {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2px 8px;
-  border-radius: var(--radius);
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-}
-
-.plate-rust {
-  background: var(--rust);
-  color: var(--white);
-}
-
-/* Dark Card Component for Policy Blocks */
-.policy-card {
-  background: var(--green-900);
-  border: 1px solid rgba(255,255,255,.08);
-  border-left: 3px solid var(--amber-dark);
-  border-radius: var(--radius);
-  padding: 28px 32px;
-  margin-bottom: 20px;
-}
-
-.policy-card h3 {
-  color: var(--amber);
-  font-size: 1.15rem;
-  margin-bottom: 12px;
-}
-
-.policy-card p,
-.policy-card li {
-  color: rgba(255,253,248,.82);
-  font-size: .95rem;
-  line-height: 1.6;
-  margin-bottom: 0.8em;
-}
-
-.policy-card p:last-child {
-  margin-bottom: 0;
-}
-
-.policy-card ul {
-  list-style: disc;
-  padding-left: 1.2rem;
-  margin: 0 0 1em;
-}
-
-.policy-card li {
-  padding: 2px 0;
-  margin-bottom: 0;
-}
-
-.policy-card a {
-  color: var(--amber);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.policy-card a:hover {
-  color: var(--white);
-}
-
-.address-block {
-  font-family: var(--font-mono);
-  font-size: .86rem !important;
-  background: rgba(0,0,0,.25);
-  padding: 14px 18px;
-  border-radius: var(--radius);
-  border: 1px dashed rgba(255,255,255,.15);
-  margin-top: 10px;
-}
-
-/* Footer */
-.site-footer {
-  background: var(--green-900);
-  padding: 56px 0 28px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr);
-  gap: 32px;
-  margin-bottom: 40px;
-}
-
-.brand-name {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  color: var(--amber);
-  display: block;
-  margin-bottom: 8px;
-}
-
-.footer-brand p {
-  color: var(--paper-dim);
-  font-size: 0.9rem;
-}
-
-.footer-col h4 {
-  color: var(--white);
-  font-size: 1.05rem;
-  margin-bottom: 14px;
-}
-
-.footer-col ul {
-  list-style: none;
-}
-
-.footer-col li {
-  margin-bottom: 8px;
-}
-
-.footer-col a {
-  color: var(--paper-dim);
-  font-size: 0.88rem;
-  transition: color 0.2s;
-}
-
-.footer-col a:hover {
-  color: var(--amber);
-}
-
-.footer-bottom {
-  padding-top: 24px;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: rgba(255,253,248,0.4);
-}
-
-/* Floating WhatsApp Button */
-.wa-float {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background: #25D366;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  z-index: 999;
-  transition: transform 0.2s;
-}
-
-.wa-float:hover {
-  transform: scale(1.08);
-}
-
-.wa-float svg {
-  width: 28px;
-  height: 28px;
-  fill: #fff;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 900px) {
-  .nav-links, .nav-cta {
-    display: none;
+  :root {
+    --bg-dark: #0d1210;
+    --card-bg: #141c18;
+    --accent: #f2a900;
+    --text-light: #fffdf8;
+    --text-dim: rgba(255, 253, 248, 0.75);
+    --border: rgba(255, 255, 255, 0.1);
   }
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
-@media (max-width: 700px) {
-  .page-intro {
-    padding: 48px 0 24px;
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  .policy-content {
-    padding: 32px 0 64px;
+
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Work Sans', -apple-system, sans-serif;
+    line-height: 1.6;
+    padding: 20px 16px;
+    -webkit-font-smoothing: antialiased;
   }
-  .policy-card {
-    padding: 20px 22px;
+
+  .wrapper {
+    max-width: 720px;
+    margin: 0 auto;
   }
-  .footer-grid {
-    grid-template-columns: 1fr;
+
+  /* Навігація */
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
   }
-  .topbar-left span {
-    display: none;
+
+  .top-nav a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
   }
-}
+
+  /* Заголовки */
+  h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 32px 0 12px;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    color: #ffffff;
+    margin: 20px 0 8px;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-bottom: 24px;
+  }
+
+  /* Текст та списки */
+  p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  ul {
+    margin: 0 0 16px 20px;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  a {
+    color: var(--accent);
+  }
+
+  .address-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 14px;
+    border-radius: 4px;
+    margin: 12px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Футер */
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-align: center;
+  }
+
+  /* Оптимізація для малих екранів */
+  @media (max-width: 480px) {
+    body {
+      padding: 16px 12px;
+    }
+    
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    ul {
+      padding-left: 16px;
+    }
+  }
 </style>
 </head>
 <body>
 
-<!-- Header / Nav -->
-<div class="site-topfix">
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-left">
-        <a href="tel:07467790798"><svg class="topbar-icon" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>07467 790798</a>
-        <span><svg class="topbar-icon" viewBox="0 0 24 24"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.6 8 12 8 12s8-6.4 8-12c0-4.4-3.6-8-8-8Zm0 10.8A2.8 2.8 0 1 1 12 6.4a2.8 2.8 0 0 1 0 6.4Z"/></svg>Unit 19, Whitehouse Farm, Whitehouse Lane, Bedmond, WD5 0SA</span>
-        <span><svg class="topbar-icon" viewBox="0 0 24 24"><path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22Zm.9 11.6 4.6 2.7-.6 1-5.4-3.2V6.5h1.4v6.1Z"/></svg>Mon–Fri 10:00–17:00 · Sat 10:00–15:00</span>
-      </div>
-      <div class="topbar-socials">
-        <a href="https://wa.me/447467790798" aria-label="WhatsApp us">
-          <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.28-1.38a9.9 9.9 0 0 0 4.71 1.2h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2Zm0 1.8a8.1 8.1 0 0 1 5.75 2.38 8.09 8.09 0 0 1 2.38 5.75c0 4.48-3.65 8.13-8.14 8.13a8.2 8.2 0 0 1-4.15-1.13l-.3-.17-3.13.82.84-3.05-.19-.31a8.07 8.07 0 0 1-1.24-4.32c0-4.49 3.65-8.14 8.14-8.14ZM8.9 7.05c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.57.12.16 1.72 2.7 4.24 3.68 2.1.82 2.52.65 2.97.62.46-.04 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.47-.28-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.12-.56.12-.17.25-.64.8-.78.96-.14.16-.29.18-.53.06-.25-.13-1.04-.38-1.98-1.22-.73-.65-1.22-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.13-.14.17-.25.25-.4.08-.17.04-.31-.02-.44-.06-.12-.56-1.37-.78-1.87-.2-.48-.4-.42-.56-.43Z"/></svg>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61589379505451" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24"><path d="M13.5 21v-7.9h2.65l.4-3.08h-3.05V8.13c0-.89.25-1.5 1.52-1.5h1.63V3.9C15.9 3.83 15 3.75 13.94 3.75c-2.2 0-3.7 1.34-3.7 3.8v2.12H7.6v3.08h2.64V21h3.26Z"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
+<div class="wrapper">
 
-  <header class="site-header">
-    <nav class="nav container">
-      <a href="index.html" class="brand">
-        <img src="boyd-logo.png" alt="BOYD Automotive" class="brand-logo">
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Servicing</a></li>
-        <li><a href="mot-failure-repairs.html">MOT Failure Repairs</a></li>
-        <li><a href="sales.html">Cars for Sale</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="nav-cta">
-        <a class="btn btn-outline btn-sm" href="tel:07467790798">Call</a>
-        <a class="btn btn-whatsapp btn-sm" href="https://wa.me/447467790798" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </nav>
+  <nav class="top-nav">
+    <a href="index.html">← Back to Home</a>
+    <a href="tel:07467790798">07467 790798</a>
+  </nav>
+
+  <header>
+    <h1>Privacy Policy &amp; Terms</h1>
+    <p class="subtitle">BOYD Automotive · Last updated: September 2026</p>
   </header>
+
+  <main>
+    <p>This Privacy Policy and Terms &amp; Conditions apply to the BOYD Automotive website (<a href="https://boydautomotive.co.uk/">https://boydautomotive.co.uk/</a>) and its use by visitors and customers.</p>
+
+    <h2>1. Privacy Policy</h2>
+
+    <h3>Who we are</h3>
+    <p>BOYD Automotive is an independent automotive garage based in Bedmond, Hertfordshire. We provide vehicle servicing, repairs, diagnostics, MOT failure repairs, and used vehicle sales.</p>
+    
+    <div class="address-box">
+      <strong>BOYD Automotive</strong><br>
+      Unit 19, Whitehouse Farm, Whitehouse Lane<br>
+      Bedmond, WD5 0SA, United Kingdom
+    </div>
+
+    <h3>Information we collect</h3>
+    <p>When you contact us or use our website, we may collect:</p>
+    <ul>
+      <li>Your name and contact details (telephone number, email);</li>
+      <li>Vehicle registration number and vehicle specifications;</li>
+      <li>Information about requested repairs, servicing, or sales enquiries;</li>
+      <li>Messages sent via WhatsApp, phone, or contact forms;</li>
+      <li>Basic analytics data regarding website usage.</li>
+    </ul>
+
+    <h3>How we use your information</h3>
+    <p>We use your data solely to provide garage services, including:</p>
+    <ul>
+      <li>Responding to enquiries and booking appointments;</li>
+      <li>Providing service quotes and vehicle diagnostics;</li>
+      <li>Processing used car sales or part-exchange enquiries;</li>
+      <li>Improving our website and service performance.</li>
+    </ul>
+    <p>We do not sell your personal information to third parties.</p>
+
+    <h3>Analytics, Cookies &amp; Third-Party Services</h3>
+    <p>We may use basic tools like Google Analytics or Meta technologies to understand website traffic. Cookies may be used for core website functionality and performance tracking. You can disable cookies at any time in your browser settings.</p>
+    <p>If you contact us via WhatsApp or phone, communication data is also processed according to WhatsApp/telecom privacy policies.</p>
+
+    <h3>Your Rights</h3>
+    <p>You have the right to request access to the personal data we hold about you, request corrections, or ask for deletion where legally applicable. Contact us directly for any data-related requests.</p>
+
+    <h2>2. Terms &amp; Conditions</h2>
+
+    <h3>Website Information &amp; Estimates</h3>
+    <p>Information on this website is for general guidance. Prices, services, and vehicle availability are subject to change. Any quote provided via telephone, WhatsApp, or website form is subject to physical inspection of the vehicle.</p>
+
+    <h3>MOT Repairs &amp; Used Vehicles</h3>
+    <p>We inspect and repair vehicles that failed an MOT elsewhere, subject to physical assessment. All used cars listed are subject to prior sale. Specific warranty details are provided individually upon purchase.</p>
+
+    <h3>Intellectual Property</h3>
+    <p>All content, text, and branding on this website belong to BOYD Automotive and may not be reproduced without permission.</p>
+
+    <h3>Contact Us</h3>
+    <p>For questions regarding these terms or your personal data:</p>
+    <div class="address-box">
+      Phone: <a href="tel:07467790798">07467 790798</a><br>
+      Location: Unit 19, Whitehouse Farm, Bedmond, WD5 0SA<br>
+      Website: <a href="https://boydautomotive.co.uk/">boydautomotive.co.uk</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 BOYD Automotive Ltd. All rights reserved.</p>
+  </footer>
+
 </div>
-
-<main>
-  <section class="page-intro">
-    <div class="container">
-      <p><a href="index.html">Home</a> / Privacy Policy &amp; Terms</p>
-      <span class="kicker">Legal &amp; Transparency</span>
-      <h1>Privacy Policy &amp; Terms</h1>
-      <p>Last updated: September 2026</p>
-    </div>
-  </section>
-
-  <section class="policy-content">
-    <div class="container">
-      
-      <div class="policy-card">
-        <p>This Privacy Policy and Terms &amp; Conditions apply to the BOYD Automotive website at <a href="https://boydautomotive.co.uk/">https://boydautomotive.co.uk/</a> and its use by visitors and customers.</p>
-      </div>
-
-      <h2 id="privacy-policy"><span class="plate plate-rust">01</span> Privacy Policy</h2>
-
-      <div class="policy-card">
-        <h3>Who we are</h3>
-        <p>BOYD Automotive is an independent automotive garage based at:</p>
-        <p class="address-block">
-          Unit 19, Whitehouse Farm<br>
-          Whitehouse Lane<br>
-          Bedmond<br>
-          WD5 0SA<br>
-          United Kingdom
-        </p>
-        <p>We provide vehicle servicing, repairs, diagnostics, MOT failure repairs and used vehicle sales.</p>
-      </div>
-
-      <div class="policy-card">
-        <h3>Information we may collect</h3>
-        <p>When you contact us or use our website, we may collect information such as:</p>
-        <ul>
-          <li>your name;</li>
-          <li>telephone number;</li>
-          <li>vehicle registration number;</li>
-          <li>details about your vehicle;</li>
-          <li>information about repairs or servicing you request;</li>
-          <li>information you provide when contacting us through WhatsApp, telephone or other communication channels;</li>
-          <li>information about how you use our website.</li>
-        </ul>
-        <p>Please do not send sensitive personal information through WhatsApp or website forms unless it is necessary for us to provide the requested service.</p>
-      </div>
-
-      <div class="policy-card">
-        <h3>How we use your information</h3>
-        <p>We may use the information you provide to:</p>
-        <ul>
-          <li>respond to enquiries;</li>
-          <li>arrange vehicle servicing, repairs or diagnostics;</li>
-          <li>provide estimates or quotations;</li>
-          <li>communicate with you about your vehicle;</li>
-          <li>arrange appointments;</li>
-          <li>provide information about vehicles for sale;</li>
-          <li>process vehicle sales or part-exchange enquiries;</li>
-          <li>improve our website and services;</li>
-          <li>understand website traffic and marketing performance;</li>
-          <li>comply with applicable legal and regulatory requirements.</li>
-        </ul>
-        <p>We do not sell your personal information to third parties.</p>
-      </div>
-
-      <div class="policy-card">
-        <h3>Website analytics and advertising</h3>
-        <p>We may use services such as Google Analytics, Google Tag Manager and Meta advertising technologies to understand how visitors use our website and to measure the effectiveness of our marketing.</p>
-        <p>These services may collect information such as:</p>
-        <ul>
-          <li>pages visited;</li>
-          <li>approximate location;</li>
-          <li>device and browser information;</li>
-          <li>interactions with website buttons and links;</li>
-          <li>information about how visitors arrived at our website.</li>
-        </ul>
-        <p>Where required by law, cookies or similar technologies will only be used with the appropriate consent.</p>
-      </div>
-
-      <div class="policy-card">
-        <h3>Cookies</h3>
-        <p>Our website may use cookies and similar technologies for:</p>
-        <ul>
-          <li>essential website functionality;</li>
-          <li>website analytics;</li>
-          <li>measuring advertising performance;</li>
-          <li>improving the website experience.</li>
-        </ul>
-        <p>You can control or delete cookies through your browser settings. Where applicable, you can also manage cookie preferences through the website's cookie consent controls.</p>
-      </div>
-
-      <div class="policy-card">
-        <h3>WhatsApp and telephone contact</h3>
-        <p>Our website allows customers to contact BOYD Automotive by WhatsApp and telephone.</p>
-        <p>When you choose to contact us through WhatsApp or telephone, the information you provide may be processed by the relevant communication provider as well as by BOYD Automotive.</p>
-        <p>We use information received through these channels only for legitimate business purposes, including responding to enquiries and providing requested automotive services.</p>
-      </div>
-
-      <div class="policy-card">
-        <h3>Third-party services &amp; Data retention</h3>
-        <p>Our website may contain links or integrations provided by third parties, including Google and WhatsApp. We are not responsible for the privacy practices or content of third-party websites or services.</p>
-        <p>We retain personal information only for as long as reasonably necessary for the purpose for which it was collected, including accounting, legal, warranty or other legitimate business purposes.</p>
-      </div>
-
-      <div class="policy-card">
-        <h3>Your rights</h3>
-        <p>Depending on applicable law, you may have rights regarding your personal information, including the right to:</p>
-        <ul>
-          <li>request access to information we hold about you;</li>
-          <li>request correction of inaccurate information;</li>
-          <li>request deletion of information where legally applicable;</li>
-          <li>object to or restrict certain processing.</li>
-        </ul>
-        <p>To make a privacy-related request, please contact BOYD Automotive using the contact details provided on our website.</p>
-      </div>
-
-      <h2 id="terms-of-website-use"><span class="plate plate-rust">02</span> Terms &amp; Conditions</h2>
-
-      <div class="policy-card">
-        <h3>Website information &amp; Repairs</h3>
-        <p>The information on this website is provided for general information about BOYD Automotive. Prices, vehicle availability and service options may change without notice.</p>
-        <p>Any estimate or quotation provided through the website, WhatsApp or telephone is subject to physical inspection of the vehicle. A final price may differ if additional faults are identified.</p>
-      </div>
-
-      <div class="policy-card">
-        <h3>MOT failure repairs &amp; Used vehicles</h3>
-        <p>BOYD Automotive can inspect and repair vehicles that have failed an MOT test elsewhere. Any quotation remains subject to inspection.</p>
-        <p>All used vehicles are subject to availability and may be sold without prior notice. Any warranty provided with a vehicle will be subject to its specific terms.</p>
-      </div>
-
-      <div class="policy-card">
-        <h3>Intellectual property &amp; External links</h3>
-        <p>Unless otherwise stated, all content (text, graphics, branding) is owned by or licensed to BOYD Automotive. Commercial reproduction without prior permission is prohibited.</p>
-      </div>
-
-      <div class="policy-card">
-        <h3>Contact</h3>
-        <p>If you have any questions about this Privacy Policy or Terms &amp; Conditions, please contact us:</p>
-        <p class="address-block">
-          <strong>BOYD Automotive</strong><br>
-          Unit 19, Whitehouse Farm, Whitehouse Lane, Bedmond, WD5 0SA<br>
-          Telephone: <a href="tel:07467790798">07467 790798</a><br>
-          Website: <a href="https://boydautomotive.co.uk/">https://boydautomotive.co.uk/</a>
-        </p>
-      </div>
-
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="brand-name">BOYD Automotive</span>
-        <p>Independent servicing and used car sales in Bedmond, Hertfordshire.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Workshop</h4>
-        <ul>
-          <li><a href="services.html">Service &amp; Maintenance</a></li>
-          <li><a href="services.html">Brakes &amp; Discs</a></li>
-          <li><a href="services.html">Diagnostics</a></li>
-          <li><a href="services.html">Clutch Replacement</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Forecourt</h4>
-        <ul>
-          <li><a href="sales.html">Cars for Sale</a></li>
-          <li><a href="sales.html">Part Exchange</a></li>
-          <li><a href="sales.html">Get a Valuation</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="tel:07467790798">07467 790798</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 BOYD Automotive Ltd. Registered in England &amp; Wales.</span>
-      <span>Unit 19, Whitehouse Farm, Whitehouse Lane, Bedmond, WD5 0SA</span>
-    </div>
-  </div>
-</footer>
-
-<a href="https://wa.me/447467790798" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.28-1.38a9.9 9.9 0 0 0 4.71 1.2h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2Z"/></svg>
-</a>
 
 </body>
 </html>
